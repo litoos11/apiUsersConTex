@@ -1,6 +1,7 @@
 package com.litoos11.backUsers.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,6 +40,11 @@ public class UserController {
 		this.userService.save(user);
 		
 		return new RestResponse(HttpStatus.OK.value(), "Operacion exitosa");
+	}
+	
+	@RequestMapping(value="/getUsers", method = RequestMethod.GET)
+	public List<User> getUsers() {
+		return this.userService.findAll();
 	}
 	
 	
