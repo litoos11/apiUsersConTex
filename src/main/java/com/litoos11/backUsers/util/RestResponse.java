@@ -2,27 +2,21 @@ package com.litoos11.backUsers.util;
 
 public class RestResponse {
 
-	private Integer responseCode;
+	private Integer code;
 	private String message;
-
-	public RestResponse(Integer responseCode) {
+	
+	public RestResponse(Integer code) {
 		super();
-		this.responseCode = responseCode;
+		this.code = code;
 	}
 
-	public RestResponse(Integer responseCode, String message) {
+	public RestResponse(Integer code, String message) {
 		super();
-		this.responseCode = responseCode;
+		this.code = code;
 		this.message = message;
 	}
 
-	public Integer getResponseCode() {
-		return responseCode;
-	}
-
-	public void setResponseCode(Integer responseCode) {
-		this.responseCode = responseCode;
-	}
+	
 
 	public String getMessage() {
 		return message;
@@ -31,4 +25,13 @@ public class RestResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+
 }
